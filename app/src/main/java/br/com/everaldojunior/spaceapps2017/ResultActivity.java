@@ -23,6 +23,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
+import java.util.Random;
 
 import br.com.everaldojunior.spaceapps2017.CustomList.CustomListAdapter;
 import br.com.everaldojunior.spaceapps2017.CustomList.InfoItem;
@@ -40,7 +41,7 @@ public class ResultActivity extends AppCompatActivity{
     ArrayList<InfoItem> data = new ArrayList<>();//climate inf.
     ArrayList<InfoItem> data2 = new ArrayList<>();//water inf.
     String latLon;
-    String key = "";//API WORLD WEATHER ONLINE
+    String key = "22c4ed9bbca041ee89a124337172604";//API RESERVA: dc82b14dfc0546d6bfc155344172304 //API WORLD WEATHER ONLINE
     private Document htmlDocument;
     private String htmlPageUrlWeather;
     private String htmlPageUrlMarine;
@@ -78,6 +79,17 @@ public class ResultActivity extends AppCompatActivity{
         jsoupAsyncTaskWeather.execute();
 
 
+        final String wavesPre[] = {"⚫ Always swim or surf at places patrolled by surf lifesavers or lifeguards." ,
+                "⚫ Swim between the red and yellow flags. They mark the safest area to swim." ,
+                "⚫ Always swim under supervision or with a friend." ,
+                "⚫ Read and obey the signs." ,
+                "⚫ Don't swim directly after a meal." ,
+                "⚫ Don't swim under the influence of drugs or alcohol." ,
+                "⚫ If you are unsure of surf conditions, ask a lifesaver or lifeguard." ,
+                "⚫ Never run and dive in the water. Even if you have checked before, conditions can change." ,
+                "⚫ If you get into trouble in the water, don't panic. Raise your arm for help, float and wait for assistance." ,
+                "⚫ Float with a current or undertow. Stay calm. Don't try to swim against it. Signal for help and wait for assistance."};
+
         Button btnPreWave = (Button) findViewById(R.id.btnPreWave);
         btnPreWave.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -86,16 +98,7 @@ public class ResultActivity extends AppCompatActivity{
                 alertDialogBuilder.setTitle("Precautions (Waves)");
 
                 alertDialogBuilder
-                        .setMessage("⚫ Always swim or surf at places patrolled by surf lifesavers or lifeguards.\n" +
-                                "⚫ Swim between the red and yellow flags. They mark the safest area to swim.\n" +
-                                "⚫ Always swim under supervision or with a friend.\n" +
-                                "⚫ Read and obey the signs.\n" +
-                                "⚫ Don't swim directly after a meal.\n" +
-                                "⚫ Don't swim under the influence of drugs or alcohol.\n" +
-                                "⚫ If you are unsure of surf conditions, ask a lifesaver or lifeguard.\n" +
-                                "⚫ Never run and dive in the water. Even if you have checked before, conditions can change.\n" +
-                                "⚫ If you get into trouble in the water, don't panic. Raise your arm for help, float and wait for assistance.\n" +
-                                "⚫ Float with a current or undertow. Stay calm. Don't try to swim against it. Signal for help and wait for assistance.")
+                        .setMessage(wavesPre[new Random().nextInt(wavesPre.length)])
                         .setCancelable(false)
                         .setPositiveButton("Ok",new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog,int id) {
@@ -252,7 +255,7 @@ public class ResultActivity extends AppCompatActivity{
         double latitude = Double.parseDouble(latLon.split(",")[0]);
         double longitude = Double.parseDouble(latLon.split(",")[1]);
 
-        List<Address> addresses  = null;
+        List<Address> addresses = null;
         try {
             addresses = geocoder.getFromLocation(latitude,longitude, 1);
         } catch (IOException e) {
@@ -304,7 +307,7 @@ public class ResultActivity extends AppCompatActivity{
 
         //Water Temp
         item = new InfoItem();
-        item.setname("Water");
+        item.setname("Temp water");
         item.setinfo(returnValue(xml, "waterTemp_C")+" ºC");
         item.seticon(img2);
         data2.add(item);
