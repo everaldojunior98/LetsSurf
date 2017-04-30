@@ -17,17 +17,19 @@ And according to the UV received it returns different precautions, aiming at hum
 
 **ResultActivity:** Through the API it takes all the information of the place selected by the user and presents to him, and from the UV index is generated possible precautions to prevent health problems.
 
-**Functions - JsoupAsyncTask:**
+
+## Functions
+**JsoupAsyncTask:**
 Are the functions for downloading the information received by the API, using the Jsoup library.
 
-**Functions - setCodIcon:**
+**setCodIcon:**
 According to the climate API returns a code and from that code is made the selection of the icon to represent the condition of the site.
 
-**Functions - setInfoAddress:**
+**setInfoAddress:**
 From the downloaded XML it picks up and extracts the latitude and longitude, with it it directs the city and the state in which the point is located.
 
-**Functions - returnValue:**
+**returnValue:**
 It extracts from a generic XML any value, only informing the key what value it is.
 
-**Functions - setInfoMarine, setInfoWeather:**
+**setInfoMarine, setInfoWeather:**
 With XML they extract the weather and sea data and put it in the listView, where this list shows other climatic conditions.
