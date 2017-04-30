@@ -1,4 +1,4 @@
-Let's Surf
+#Let's Surf
 
 ![Let's Surf](https://api-2017.spaceappschallenge.org/team-photos/aLHcJpojT2pExxyINlKxSWYVtF4=/3010/width-800/)
 
