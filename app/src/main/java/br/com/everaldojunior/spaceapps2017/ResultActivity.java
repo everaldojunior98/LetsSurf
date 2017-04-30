@@ -41,7 +41,7 @@ public class ResultActivity extends AppCompatActivity{
     ArrayList<InfoItem> data = new ArrayList<>();//climate inf.
     ArrayList<InfoItem> data2 = new ArrayList<>();//water inf.
     String latLon;
-    String key = "22c4ed9bbca041ee89a124337172604";//API RESERVA: dc82b14dfc0546d6bfc155344172304 //API WORLD WEATHER ONLINE
+    String key = "";//API WORLD WEATHER ONLINE
     private Document htmlDocument;
     private String htmlPageUrlWeather;
     private String htmlPageUrlMarine;
@@ -267,21 +267,23 @@ public class ResultActivity extends AppCompatActivity{
         String state = "";
         String country = "";
 
-        if(addresses.size() > 0) {
-            city = addresses.get(0).getLocality();
-            state = addresses.get(0).getAdminArea();
-            country = addresses.get(0).getCountryName();
+        if(addresses != null){
+            if(addresses.size() > 0) {
+                city = addresses.get(0).getLocality();
+                state = addresses.get(0).getAdminArea();
+                country = addresses.get(0).getCountryName();
 
-            if(city != null && state != null){
-                address = city+" - "+state;
-            }
+                if(city != null && state != null){
+                    address = city+" - "+state;
+                }
 
-            if(city == null){
-                address = state;
-            }
+                if(city == null){
+                    address = state;
+                }
 
-            if(state == null){
-                address = country;
+                if(state == null){
+                    address = country;
+                }
             }
         }
     }
