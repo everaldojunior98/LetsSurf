@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_search"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="0dp"
+    android:paddingLeft="0dp"
+    android:paddingRight="0dp"
+    android:paddingTop="0dp"
+    tools:context="br.com.everaldojunior.spaceapps2017.ResultActivity"
+    android:background="#E84C3D">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.8"
+            android:paddingTop="10dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/txtCity"
+                android:layout_weight="1"
+                android:gravity="center_vertical|center_horizontal"
+                android:textSize="20sp"
+                android:textStyle="normal|bold"
+                android:textColor="#FFFFFF"
+                android:fontFamily="sans-serif"
+                android:text="Loading..." />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:srcCompat="@drawable/img"
+                android:id="@+id/imgStatus"
+                android:layout_weight="0.45"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.6"
+            android:divider="#00000000"
+            android:paddingTop="10dp">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <TextView
+                    android:text="Weather"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/textView7"
+                    android:layout_weight="1"
+                    android:textColor="#FFFFFF"
+                    android:paddingLeft="10dp"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:fontFamily="sans-serif"
+                    android:textAllCaps="false"
+                    android:textStyle="normal|bold"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:text="Marine"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/textView6"
+                    android:layout_weight="1"
+                    android:textColor="#FFFFFF"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:fontFamily="sans-serif"
+                    android:textStyle="normal|bold"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.1">
+
+                <ListView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.1"
+                    android:id="@+id/list"
+                    android:dividerHeight="10dp"
+                    android:divider="#00000000"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:layout_marginRight="2dp" />
+
+                <ListView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.1"
+                    android:id="@+id/list2"
+                    android:dividerHeight="10dp"
+                    android:divider="#00000000"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:layout_marginLeft="2dp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:divider="#00000000"
+            android:paddingTop="10dp">
+
+            <TextView
+                android:text="Precautions"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/textView"
+                android:layout_weight="3"
+                android:textColor="#FFFFFF"
+                android:textStyle="normal|bold"
+                android:fontFamily="sans-serif"
+                android:textSize="16sp"
+                android:textAllCaps="true"
+                android:gravity="center" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:divider="#00000000">
+
+                <Button
+                    android:text="UV"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/btnPre"
+                    android:layout_weight="1"
+                    android:background="@drawable/round"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp" />
+                <Button
+                    android:text="Waves"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/btnPreWave"
+                    android:layout_weight="1"
+                    android:background="@drawable/round"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+</RelativeLayout>
