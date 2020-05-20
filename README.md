@@ -1,6 +1,6 @@
 # Let's Surf
 
-![Let's Surf](https://api-2017.spaceappschallenge.org/team-photos/aLHcJpojT2pExxyINlKxSWYVtF4=/3010/width-800/)
+![Let's Surf](https://2017.spaceappschallenge.org/images/team-photosaLHcJpojT2pExxyINlKxSWYVtF43010width-800.jpg)
 
 The App has 3 screens, simple and functional design. In the first screen we have a button to open the map, this one is in the second screen, its function is to choose locations for analysis, finally in the third screen we have the information on climatic and marine analyzes, these, referent to the selected location in the last screen.
 
